@@ -1,0 +1,3 @@
+SQLite. Table `orders(id INTEGER PRIMARY KEY, customer TEXT, amount INTEGER, day TEXT)`, where day is an ISO date.
+Write ONE SELECT statement that returns, for each customer, the day on which the customer's running total of amount (orders taken in order of day, then id) first reached or exceeded 100. Columns: customer, day. Customers whose total never reaches 100 are left out. Order by customer.
+Reply with one SQL code block and nothing else.

@@ -1,0 +1,2 @@
+Implement SHA-256 from scratch in Python: a function `sha256(data: bytes) -> str` returning the lowercase hex digest.
+No imports at all. Reply with one Python code block and nothing else.

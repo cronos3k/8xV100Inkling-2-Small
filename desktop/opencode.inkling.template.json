@@ -1,0 +1,26 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": false,
+  "share": "disabled",
+  "enabled_providers": ["v100"],
+  "model": "v100/inkling-2-small",
+  "small_model": "v100/inkling-2-small",
+  "provider": {
+    "v100": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "V100 box",
+      "options": {
+        "baseURL": "http://127.0.0.1:__PORT__/v1",
+        "apiKey": "none"
+      },
+      "models": {
+        "inkling-2-small": {
+          "name": "Inkling-2-Small (8x V100, 1M context)",
+          "tool_call": true,
+          "reasoning": true,
+          "limit": { "context": 1048576, "output": 32768 }
+        }
+      }
+    }
+  }
+}

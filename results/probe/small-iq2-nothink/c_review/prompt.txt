@@ -1,0 +1,34 @@
+List every bug in this C file, one numbered item per bug, each with a one-sentence explanation. Be complete but do not invent problems.
+
+```c
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+char *read_name(void) {
+    char buf[32];
+    fgets(buf, sizeof(buf), stdin);
+    return buf;
+}
+
+int sum_ok(int a, int b) {
+    if (a + b < a) return 0;   /* overflow check */
+    return 1;
+}
+
+void fill(int arr[], int v) {
+    for (size_t i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) arr[i] = v;
+}
+
+char *dup_upper(const char *s) {
+    char *r = malloc(strlen(s));
+    for (size_t i = 0; i <= strlen(s); i++) r[i] = s[i] & ~0x20;
+    return r;
+}
+
+int main(void) {
+    unsigned char c;
+    while ((c = getchar()) != EOF) putchar(c);
+    return 0;
+}
+```

@@ -1,0 +1,5 @@
+sha256         PASS   2718 tok  259.9 s  ALL-OK
+mini_scheme    PASS   9375 tok  789.3 s  ALL-OK
+cpp_intervals  PASS  11959 tok  988.8 s  0 warning(s); ALL-OK
+js_deep_equal  FAIL  12000 tok  995.3 s  finish=length; no code block
+RESULT 3 of 4 passed, thinking on, 995 s wall

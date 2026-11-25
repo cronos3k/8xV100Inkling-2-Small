@@ -1,0 +1,5 @@
+Write a Python function `evaluate(expr: str) -> float` that evaluates an arithmetic expression given as a string.
+Supported: decimal numbers such as 3 or 2.5, the binary operators + - * / and ** , unary minus (which may be repeated), parentheses, and spaces anywhere between tokens.
+Rules, identical to Python: * and / bind tighter than + and -; ** binds tighter than a unary minus on its left (so -2**2 is -4) and is right-associative (2**3**2 is 512); the right operand of ** may itself start with a unary minus (2**-1 is 0.5).
+Raise ValueError for any malformed input, including the empty string.
+Do not use eval, exec, compile or the ast module. Reply with one Python code block and nothing else.

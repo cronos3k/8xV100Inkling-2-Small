@@ -1,0 +1,4 @@
+Write a Python module with a function `run(src: str) -> list` that interprets a small Scheme dialect. `run` evaluates every top-level form in order and returns the list of the values of all forms that are not `define`.
+Language: integer literals (possibly negative, such as -3); symbols; `(define name expr)` and `(define (name params...) body)`; `(lambda (params...) body)` with lexical scoping and closures; `(if cond then else)`; `(let ((name expr) ...) body)`; function application.
+Built-ins: `+` and `*` with any number of arguments; `-` with one argument (negation) or two; `<` and `=` with two arguments, returning Python True or False. In `if`, only False counts as false.
+Recursion must work. Reply with one Python code block and nothing else.

@@ -1,0 +1,2 @@
+In Python, assign to a variable named PATTERN a raw-string regular expression that, used with re.fullmatch, accepts exactly the valid dotted-quad IPv4 addresses: four decimal numbers 0 to 255 separated by dots, with no leading zeros (the number zero is written as 0).
+Reply with one Python code block and nothing else.

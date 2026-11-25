@@ -1,0 +1,16 @@
+expr_eval      PASS   1236 tok  125.8 s  ALL-OK
+ttl_cache      PASS    466 tok   49.6 s  ALL-OK
+sha256         FAIL   1328 tok  139.4 s  Traceback (most recent call last): File "/srv/archive-a/volta-ink2/probe/small-iq2-nothink/sha256/test.py", line 8, in <module> assert sha256(d) == hashlib.sha256(d).hexdigest(), "wrong digest for %d bytes" % n AssertionError: wro
+c_utils        PASS    778 tok   81.5 s  0 warning(s); ALL-OK
+sql_window     PASS    100 tok   10.3 s  got [('ann', '2024-01-02'), ('bob', '2024-01-01'), ('dee', '2024-01-04'), ('eve', '2024-01-03')] want [('ann', '2024-01-02'), ('bob', '2024-01-01'), ('dee', '2024-01-04'), ('eve', '2024-01-03')]
+regex_ipv4     PASS    110 tok   10.8 s  ALL-OK
+trace          PASS   1187 tok  119.1 s  got ['[10, 11, 12] [20, 20, 20] True 2', '-4 2 2 4 False', "fdb edc [1, 3] ['aa', 'b']"] want ['[10, 11, 12] [20, 20, 20] True 2', '-4 2 2 4 False', "fdb edc [1, 3] ['aa', 'b']"]
+bugfix         PASS    225 tok   22.1 s  ALL-OK
+mini_scheme    PASS   1169 tok  118.6 s  ALL-OK
+exact_copy     PASS   1465 tok  138.2 s  identical, 38 lines
+asyncio_limit  PASS    216 tok   20.6 s  ALL-OK
+cpp_intervals  PASS    674 tok   68.1 s  0 warning(s); ALL-OK
+c_review       PASS    297 tok   30.3 s  found 5 of 5
+topo_stages    PASS   1008 tok   82.8 s  ALL-OK
+js_deep_equal  FAIL    782 tok   69.6 s  js/loader.js:1027:10) at Module.load (internal/modules/cjs/loader.js:863:32) at Function.Module._load (internal/modules/cjs/loader.js:708:14) at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12) at i
+RESULT 13 of 15 passed, thinking off, 303 s wall

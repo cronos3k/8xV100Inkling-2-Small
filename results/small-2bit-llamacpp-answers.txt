@@ -1,0 +1,75 @@
+code_py      57 prompt tok,  197 out tok,   12.9 s,  15.3 tok/s, finish stop
+   ```python
+   def merge_intervals(intervals):
+       """
+       Merge overlapping closed intervals.
+   
+       Args:
+           intervals: A list of [start, end] pairs.
+   
+       Returns:
+           A list of merged [start, end] intervals, sorted by start.
+       """
+       if not intervals:
+           return []
+   
+       sorted_intervals = sorted(intervals, key=lambda x: x[0])
+       merged = [list(sorted_intervals[0])]
+   
+       for start, end in sorted_intervals[1:]:
+           if start <= merged[-1][1]:
+               merged[-1][1] = max(merged[-1][1], end)
+           else:
+               merged.append([start, end])
+   
+       return merged
+   ```
+code_rust    50 prompt tok,  110 out tok,    7.2 s,  15.3 tok/s, finish stop
+   ```rust
+   fn is_palindrome(s: &str) -> bool {
+       let chars: Vec<char> = s
+           .chars()
+           .filter(|c| c.is_alphanumeric())
+           .map(|c| c.to_lowercase().next().unwrap())
+           .collect();
+   
+       chars.iter().eq(chars.iter().rev())
+   }
+   ```
+json         56 prompt tok,   46 out tok,    3.4 s,  13.4 tok/s, finish stop
+   {"name":"Meridian Harbor Lines","founded":1987,"cities":["Rotterdam","Singapore","Hamburg","Busan"]}
+math         64 prompt tok,   75 out tok,    5.2 s,  14.6 tok/s, finish stop
+   Pump A fills at 2400/40 = 60 litres per minute.
+   Pump B empties at 2400/60 = 40 litres per minute.
+   Net fill rate = 60 − 40 = 20 litres per minute, so time to fill = 2400/20 = 120 minutes.
+logic        45 prompt tok,   10 out tok,    1.2 s,   8.5 tok/s, finish stop
+   Ben is second tallest.
+prose_en     34 prompt tok,  170 out tok,   10.5 s,  16.2 tok/s, finish stop
+   The harbour town wakes slowly as the first light touches the water. Fishing boats sit quietly at their moorings, their hulls catching the pale glow of the rising sun. Gulls circle overhead, calling out as they search for breakfast. Along the quay, a few early risers open their shops, rolling up metal shutters and sweeping the pavement. The smell of salt and diesel hangs in the air, mixed with the scent of fresh bread from the bakery on the corner. Nets are mended, crates are stacked, and the day's work begins without ceremony. By the time the sun clears the horizon, the town is fully awake, its rhythm set by the tide and the needs of the sea.
+prose_de     48 prompt tok,  178 out tok,   11.2 s,  15.9 tok/s, finish stop
+   In einer kleinen Werkstatt am Stadtrand werden alte Rechenmaschinen mit großer Sorgfalt restauriert. Die Werkstatt ist mit Werkzeugen und Ersatzteilen ausgestattet, die speziell für mechanische und elektromechanische Geräte aus den frühen Jahrzehnten des 20. Jahrhunderts geeignet sind. Die Reparaturarbeiten umfassen das Reinigen, Justieren und Ersetzen verschlissener Komponenten, wobei oft auf originale Bauteile zurückgegriffen wird. Die Betreiber der Werkstatt verfügen über fundiertes Wissen in der Mechanik und Elektronik dieser historischen Geräte. Neben der reinen Instandsetzung werden die Maschinen auch dokumentiert und für Sammler oder Museen aufbereitet. Die Werkstatt dient somit nicht nur der Erhaltung technischer Artefakte, sondern auch der Bewahrung eines wichtigen Kapitels der Rechen- und Technikgeschichte.
+legal        40 prompt tok,  139 out tok,    8.9 s,  15.6 tok/s, finish stop
+   Under German sales law, a Gewährleistung (warranty claim) is a statutory right that automatically applies to every purchase, obligating the seller to fix defects that existed at the time of delivery. In contrast, a Garantie (guarantee) is a voluntary, contractual promise made by the seller or manufacturer that goes beyond the legal minimum, often covering specific performance or durability for a set period. While the Gewährleistung is a mandatory legal protection for the buyer, the Garantie is an optional extra that can be tailored to specific terms. Ultimately, the warranty claim is a legal entitlement, whereas the guarantee is a discretionary commitment.
+summary      67 prompt tok,   52 out tok,    3.9 s,  13.5 tok/s, finish stop
+   The company moved its servers from a rented data centre into its own basement, cutting power costs by a third. However, the team now spends about one working day per week handling cooling, backups and hardware faults themselves.
+translate    38 prompt tok,   26 out tok,    2.1 s,  12.6 tok/s, finish stop
+   Das Ersatzteil ist am Dienstag angekommen, aber die Rechnung führt immer noch die alte Seriennummer auf.
+facts        34 prompt tok,   16 out tok,    1.4 s,  11.2 tok/s, finish stop
+   Titan
+   Rhea
+   Iapetus
+   Dione
+   Tethys
+refactor     84 prompt tok,  108 out tok,    7.3 s,  14.8 tok/s, finish stop
+   Here's a safe version:
+   
+   ```c
+   void greet(const char *name) {
+       char buf[16];
+       snprintf(buf, sizeof buf, "Hello, %s", name);
+       puts(buf);
+   }
+   ```
+   
+   I replaced the unbounded `strcpy`/`strcat` with a single `snprintf` that caps the output at the buffer size, so the greeting is truncated rather than overflowing `buf`.
+TOTAL 1127 tokens in 75.1 s = 15.0 tok/s including prompt time

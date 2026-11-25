@@ -1,0 +1,5 @@
+Write a Python class `BTree` implementing a B-tree of minimum degree t as defined in CLRS.
+`BTree(t)` with t >= 2; `insert(key)` (a key already present is ignored); `delete(key)` (does nothing if the key is absent); `key in tree`; `keys()` returning all keys as a sorted list.
+The tree must expose `self.root`, and every node must have the attributes `keys` (the node's keys in ascending order) and `children` (the list of child nodes, empty for a leaf).
+Invariants that must hold after every operation: every node except the root holds between t-1 and 2t-1 keys; the root holds at most 2t-1 keys, and at least one key if it has children; an internal node with k keys has exactly k+1 children; all leaves are at the same depth.
+Reply with one Python code block and nothing else.

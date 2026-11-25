@@ -1,0 +1,2 @@
+Write `async def gather_limited(fns, limit)` in Python. `fns` is a list of zero-argument callables, each returning an awaitable. Run them with at most `limit` running at the same time, starting them in list order, and return the list of results in the order of `fns`. If any of them raises, cancel everything that is still running, start nothing further, and re-raise that exception to the caller. An empty list returns [].
+Reply with one Python code block and nothing else.

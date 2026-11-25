@@ -1,0 +1,7 @@
+Write a Python class `TTLCache` with this exact behaviour.
+`TTLCache(capacity, ttl, clock=time.monotonic)`: `clock` is a zero-argument function returning the current time in seconds.
+`put(key, value)`: store or overwrite; this sets the entry's timestamp to now and makes it the most recently used. When a NEW key is inserted and the cache already holds `capacity` entries, first drop every expired entry; only if it is still full, evict the least recently used entry.
+`get(key)`: return the value, or None if the key is missing or expired (an expired entry is removed). A successful get makes the entry the most recently used but does NOT change its timestamp.
+`len(cache)`: the number of entries that are not expired.
+An entry is expired when clock() - timestamp >= ttl.
+Reply with one Python code block and nothing else.

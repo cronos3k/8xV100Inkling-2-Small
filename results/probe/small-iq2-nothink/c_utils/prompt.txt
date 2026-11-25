@@ -1,0 +1,5 @@
+Write these three C11 functions. Do not write main(). Assume <stdint.h>, <stddef.h>, <string.h>, <limits.h> and <ctype.h> are already included.
+1. `uint32_t crc32_ieee(const uint8_t *data, size_t len)`: the standard CRC-32 (as in zlib and PNG), computed bit by bit without a lookup table.
+2. `int parse_int32(const char *s, int32_t *out)`: strict decimal parser. Accepts an optional single '+' or '-' followed by one or more digits and nothing else (no spaces, no other characters). Returns 0 and stores the value on success. Returns -1 and leaves *out unchanged if the text is malformed or the value does not fit in int32_t. It must not rely on signed overflow.
+3. `void reverse_words(char *s)`: reverses the order of the words in place, using no extra buffer. Words are separated by single spaces and there are no leading or trailing spaces. "the quick brown fox" becomes "fox brown quick the".
+Reply with one C code block and nothing else.

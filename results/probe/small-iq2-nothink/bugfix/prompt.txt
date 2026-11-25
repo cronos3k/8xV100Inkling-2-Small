@@ -1,0 +1,30 @@
+This module has several bugs. Intended behaviour:
+`lower_bound(a, x)`: a is sorted ascending; return the first index i with a[i] >= x, or len(a) if there is none.
+`merge_k(lists)`: each inner list is sorted ascending; return one merged sorted list. Inner lists may be empty, and the function must not modify its arguments.
+
+```python
+import heapq
+
+def lower_bound(a, x):
+    lo, hi = 0, len(a) - 1
+    while lo < hi:
+        mid = (lo + hi) // 2
+        if a[mid] < x:
+            lo = mid
+        else:
+            hi = mid
+    return lo
+
+def merge_k(lists):
+    heap = [(lst[0], lst) for lst in lists]
+    heapq.heapify(heap)
+    out = []
+    while heap:
+        val, lst = heapq.heappop(heap)
+        out.append(val)
+        lst.pop(0)
+        if lst:
+            heapq.heappush(heap, (lst[0], lst))
+    return out
+```
+Reply with the corrected module in one Python code block and nothing else.
